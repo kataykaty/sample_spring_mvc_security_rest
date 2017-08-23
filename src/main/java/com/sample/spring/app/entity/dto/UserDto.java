@@ -6,6 +6,7 @@ public class UserDto implements Serializable {
 
 	private String userName;
 	private String fullName;
+	
 	public String getUserName() {
 		return userName;
 	}
