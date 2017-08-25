@@ -39,4 +39,14 @@ public class HomeController {
 	public @ResponseBody String sampleRestJsonData(@PathVariable("id")Integer id, @PathVariable("code") String code) {
 		return "id: " + id + ", code: "+ code;
 	}
+	
+	@RequestMapping("/admin/security")
+	public @ResponseBody String sampleSecurity() {
+		return "hello addmin";
+	}
+	
+	@RequestMapping("/member/security")
+	public @ResponseBody String sampleSecurityMember() {
+		return "hello member";
+	}
 }

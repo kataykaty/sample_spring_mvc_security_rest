@@ -1,9 +1,9 @@
 package com.sample.spring.config;
 
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
@@ -18,6 +18,7 @@ import com.sample.spring.app.controller.HomeController;
 @EnableWebMvc
 @ComponentScan(basePackageClasses=HomeController.class)
 @ImportResource("classpath:spring-config.xml")
+@Import(SecurityConfig.class)
 public class ProjectConfig extends WebMvcConfigurerAdapter {
 	
 	
